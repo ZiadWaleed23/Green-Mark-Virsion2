@@ -99,16 +99,38 @@ window.addEventListener('scroll', () => {
 
 
 
-// تشغيل السلايدر (Home Slider)
+// // تشغيل السلايدر (Home Slider)
+// var swiper = new Swiper(".home-slid", {
+//     loop: true,              // يخلي السلايدر يلف ميعملش ستوب
+//     grabCursor: true,        // شكل الماوس يتغير لما تقف عليه
+//     autoplay: {
+//         delay: 4000,         // يغير الصورة كل 4 ثواني
+//         disableOnInteraction: false, // يفضل شغال حتى لو المستخدم حرك السلايد بيده
+//     },
+//     pagination: {
+//         el: ".swiper-pagination",
+//         clickable: true,     // النقط اللي تحت تبقي قابلة للضغط
+//     },
+// });
+
+
+// تشغيل السلايدر (Home Slider) مع تأثير الـ Fade
 var swiper = new Swiper(".home-slid", {
-    loop: true,              // يخلي السلايدر يلف ميعملش ستوب
-    grabCursor: true,        // شكل الماوس يتغير لما تقف عليه
-    autoplay: {
-        delay: 4000,         // يغير الصورة كل 4 ثواني
-        disableOnInteraction: false, // يفضل شغال حتى لو المستخدم حرك السلايد بيده
+    loop: true,               // يخلي السلايدر يلف ميعملش ستوب
+    effect: "fade",           // <--- ده السطر اللي بيغير الشكل لـ اختفاء وظهور ناعم
+    
+    // إعدادات الـ Fade (اختياري عشان تخلي الحركة أنعم)
+    fadeEffect: {
+        crossFade: true       // بيخلي الصور تدخل في بعضها بشكل احترافي
     },
+
+    autoplay: {
+        delay: 4000,          // يغير الصورة كل 4 ثواني
+        disableOnInteraction: false, 
+    },
+    
     pagination: {
         el: ".swiper-pagination",
-        clickable: true,     // النقط اللي تحت تبقي قابلة للضغط
+        clickable: true,      // النقط اللي تحت تبقى قابلة للضغط
     },
 });
