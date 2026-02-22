@@ -44,11 +44,6 @@ header{
     background: rgba(0, 0, 0, 0.6); /* Black for header background */
     z-index: 1001;
 }
-header .logo{
-    font-size: 3.5rem;
-    color: var(--min-color); /* White for the logo */
-    padding: 0.4rem;
-}
 header .navbar a{
     margin: 0 0.8rem;
     font-size: 1.9rem;
@@ -658,9 +653,6 @@ header .navbar a.active-link {
 
 
 
-
-
-
 /* تأكد إن الصور بتملى المكان */
 .home .home-slid .box .image img {
     width: 100%;
@@ -668,4 +660,3 @@ header .navbar a.active-link {
     object-fit: cover;
 
 }
-
