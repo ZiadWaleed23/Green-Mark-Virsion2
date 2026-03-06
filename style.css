@@ -41,7 +41,7 @@ header{
     align-items: center;
     justify-content: space-between;
     padding: 1rem 3%;
-    background: rgba(0, 0, 0, 0.6); /* Black for header background */
+    background: rgba(0, 0, 0, 0.651);
     z-index: 1001;
 }
 header .navbar a{
@@ -85,6 +85,7 @@ header .fa-bars{
 .home .home-slid .box .content p{
     font-size: 2.5rem;
     margin: 1rem 0;
+    font-family: 'Times New Roman', Times, serif;
 }
 strong{
     color: var(--th-color); /* Green for strong text */
@@ -318,6 +319,15 @@ footer {
     border-radius: 1rem;
     border-bottom: 5px solid var(--th-color);
 }
+
+.service-card {
+    transition: all 0.4s ease-in-out;
+}
+
+.service-card:hover {
+    box-shadow: 0 5px 15px #ff7f00;
+}
+
 .service-card:hover{ background: var(--th-color); transform: translateY(-10px); }
 .service-card i{ font-size: 5rem; color: var(--sc-color); margin-bottom: 2rem; }
 .service-card h3{ font-size: 2.2rem; margin-bottom: 1rem; }
@@ -369,6 +379,17 @@ footer {
     height: 50px; /* Adjust the height as necessary */
     width: auto;  /* Keep the aspect ratio */
     float: left;  /* Aligns to the left */
+}
+
+/* تنسيق اللوجو نفسه */
+.logo-image {
+    
+    filter: drop-shadow(2px 4px 6px var(--th-color));
+    transition: filter 0.3s ease;
+}
+
+.logo-image:hover {
+    filter: drop-shadow(2px 4px 6px var(--sc-color));
 }
 
 
@@ -652,7 +673,6 @@ header .navbar a.active-link {
 }
 
 
-
 /* تأكد إن الصور بتملى المكان */
 .home .home-slid .box .image img {
     width: 100%;
@@ -708,3 +728,4 @@ header .navbar a.active-link {
     visibility: visible;
     opacity: 1;
 }
+/* أخفي الزرار لو في شاشات الموبايل الصغيرة أوي لو حابب، بس الأفضل تسيبه */
